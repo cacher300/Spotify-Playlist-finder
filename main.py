@@ -3,7 +3,6 @@ import random
 import string
 import sys
 
-
 def check_website_status(url):
     try:
         response = requests.get(url)
@@ -28,17 +27,14 @@ def check_website_status(url):
         print(f"An error occurred: {e}")
 
 def generate_random_string(length):
-    # Define the character set: lowercase, uppercase letters, and digits
     characters = string.ascii_letters + string.digits
 
-    # Generate a random string using the specified length
     random_string = ''.join(random.choice(characters) for _ in range(length))
 
     return random_string
 
 
-# Infinite loop to continuously generate random strings
-string_length = 22  # Length of the string to generate
+string_length = 22  
 
 try:
     i = 1
@@ -49,5 +45,5 @@ try:
 
         i += 1
 except KeyboardInterrupt:
-    print("Generation stopped by user.")
+    print("Generation stopped")
 
